@@ -4,6 +4,11 @@
     -unity-font-style: bold;
 }
 
+.alaid:active:focus {
+    color: rgb(178, 0, 152);
+    -unity-font-style: bold;
+}
+
 .alaid:hover {
     font-size: 300%;
     color: rgb(0, 7, 255);
@@ -11,4 +16,14 @@
     transition-duration: 500ms;
     transition-delay: 20ms;
     transition-property: scale;
+}
+
+.alaid:active:checked:focus {
+    color: rgb(0, 255, 108);
+    -unity-font-style: bold;
+}
+
+.alaid:focus {
+    color: rgb(255, 206, 0);
+    -unity-font-style: bold;
 }

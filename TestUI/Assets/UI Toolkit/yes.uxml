@@ -1,0 +1,15 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/alaid.uss?fileID=7433441132597879392&amp;guid=782fce0a6386fba4f818b148b8722e31&amp;type=3#alaid" />
+    <ui:VisualElement name="MainMenu" style="flex-grow: 1; align-items: stretch; justify-content: center; flex-shrink: 1; display: none;">
+        <ui:Button text="Button" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Play" class="alaid" style="height: 20%;" />
+        <ui:Button text="Button" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Options" class="alaid" style="height: 20%;" />
+        <ui:Button text="Button" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Quit" class="alaid" style="height: 20%;" />
+    </ui:VisualElement>
+    <ui:VisualElement name="Options" style="flex-grow: 1; flex-direction: column-reverse;">
+        <ui:Button text="Button" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Back" class="alaid" style="height: 20%; transition-property: scale; transition-duration: 0.5s; transition-delay: 0.02s; transition-timing-function: linear;" />
+        <ui:VisualElement style="flex-grow: 1; align-self: center; justify-content: flex-start; flex-direction: row; align-items: flex-end;">
+            <ui:Toggle label="Toggle" style="height: auto; align-self: auto; align-items: auto; font-size: 52%;" />
+            <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" style="font-size: 50%;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

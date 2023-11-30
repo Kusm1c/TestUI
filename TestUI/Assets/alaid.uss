@@ -1,0 +1,14 @@
+.alaid {
+    font-size: 300%;
+    color: rgb(255, 0, 0);
+    -unity-font-style: bold;
+}
+
+.alaid:hover {
+    font-size: 300%;
+    color: rgb(0, 7, 255);
+    -unity-font-style: bold;
+    transition-duration: 500ms;
+    transition-delay: 20ms;
+    transition-property: scale;
+}

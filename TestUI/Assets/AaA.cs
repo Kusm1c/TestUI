@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -81,10 +82,41 @@ public class AaA : MonoBehaviour
         
         _MinMaxSlider.RegisterValueChangedCallback(evt => _Labels[0].text = $"Min: {evt.newValue.x} Max: {evt.newValue.y}");
         _Slider.RegisterValueChangedCallback(evt => _Labels[1].text = $"Slider: {evt.newValue}");
+        
         _DropdownField.RegisterValueChangedCallback(evt => _Labels[2].text = $"Dropdown: {evt.newValue}");
         _Toggle.RegisterValueChangedCallback(evt => _Labels[3].text = $"Toggle: {evt.newValue}");
         
         _Back.clicked += Back;
+        
+        if (PlayerPrefs.HasKey("Min"))
+        {
+            _MinMaxSlider.minValue = PlayerPrefs.GetFloat("Min");
+            _MinMaxSlider.maxValue = PlayerPrefs.GetFloat("Max");
+            _Labels[0].text = $"Min: {PlayerPrefs.GetFloat("Min")} Max: {PlayerPrefs.GetFloat("Max")}";
+        }
+        
+        if (PlayerPrefs.HasKey("Slider"))
+        {
+            _Slider.value = PlayerPrefs.GetFloat("Slider");
+            _Labels[1].text = $"Slider: {PlayerPrefs.GetFloat("Slider")}";
+        }
+        
+        if (PlayerPrefs.HasKey("Dropdown"))
+        {
+            _DropdownField.value = PlayerPrefs.GetString("Dropdown");
+            _Labels[2].text = $"Dropdown: {PlayerPrefs.GetString("Dropdown")}";
+        }
+        
+        if (PlayerPrefs.HasKey("Toggle"))
+        {
+            _Toggle.value = PlayerPrefs.GetInt("Toggle") == 1;
+            _Labels[3].text = $"Toggle: {PlayerPrefs.GetInt("Toggle")}";
+        }
+        
+        if (PlayerPrefs.HasKey("RadioButtonGroup"))
+        {
+            _RadioButtonGroup.value = PlayerPrefs.GetInt("RadioButtonGroup");
+        }
         
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         
@@ -112,37 +144,44 @@ public class AaA : MonoBehaviour
             _MainMenu.style.display = DisplayStyle.None;
             _OptionsMenu.style.display = DisplayStyle.None;
             _GameMenu.style.display = DisplayStyle.Flex;
+            _GamePausedMenu.style.display = DisplayStyle.None;
         }
     }
     
-    private  void Resume()
+    private void Resume()
     {
         _GamePausedMenu.style.display = DisplayStyle.None;
         _GameMenu.style.display = DisplayStyle.Flex;
     }
     
-    private  void Settings()
+    private void Settings()
     {
         SwitchToOptions(true);
     }
 
-    private  void MainMenuButton()
+    private void MainMenuButton()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene("SampleScene");
     }
 
-    private  void Pause()
+    private void Pause()
     {
         _GamePausedMenu.style.display = DisplayStyle.Flex;
         _GameMenu.style.display = DisplayStyle.None;
     }
 
-    private  void Back()
+    private void Back()
     { 
+        PlayerPrefs.SetFloat("Min", _MinMaxSlider.minValue);
+        PlayerPrefs.SetFloat("Max", _MinMaxSlider.maxValue);
+        PlayerPrefs.SetFloat("Slider", _Slider.value);
+        PlayerPrefs.SetString("Dropdown", _DropdownField.value);
+        PlayerPrefs.SetInt("Toggle", _Toggle.value ? 1 : 0);
+        PlayerPrefs.SetInt("RadioButtonGroup", _RadioButtonGroup.value);
         SwitchToOptions(false);
     }
 
-    private  void Play()
+    private void Play()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene("A");
     }
@@ -152,7 +191,7 @@ public class AaA : MonoBehaviour
         SwitchToOptions(true);
     }
     
-    private  void SwitchToOptions(bool switchToOptions)
+    private void SwitchToOptions(bool switchToOptions)
     {
         if (_isInGame)
         {
@@ -166,11 +205,16 @@ public class AaA : MonoBehaviour
         _OptionsMenu.style.display = switchToOptions ? DisplayStyle.Flex : DisplayStyle.None;
     }
     
-    private  void Exit()
+    private void Exit()
     {
         Application.Quit();
         #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
         #endif
+    }
+
+    private void OnApplicationQuit()
+    {
+        PlayerPrefs.Save();
     }
 }

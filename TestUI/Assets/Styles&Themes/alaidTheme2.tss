@@ -1,4 +1,0 @@
-@import url("UI Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss");
-
-@import url("alaidv2.uss");
-VisualElement {}

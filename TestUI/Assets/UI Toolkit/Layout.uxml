@@ -1,43 +1,43 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <ui:VisualElement name="MainMenu" style="flex-grow: 1; align-items: stretch; justify-content: center; flex-shrink: 1; display: none;">
-        <ui:Button text="Play" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Play" class="alaid" style="height: 20%;" />
-        <ui:Button text="Settings" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Options" class="alaid" style="height: 20%;" />
-        <ui:Button text="Quit" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Quit" class="alaid" style="height: 20%;" />
+        <ui:Button text="Play" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Play" class="style" style="height: 20%;" />
+        <ui:Button text="Settings" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Options" class="style" style="height: 20%;" />
+        <ui:Button text="Quit" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Quit" class="style" style="height: 20%;" />
     </ui:VisualElement>
     <ui:VisualElement name="OptionsMenu" style="flex-grow: 1; flex-direction: flex-start; padding-top: 30px; padding-right: 30px; padding-bottom: 30px; padding-left: 30px; align-self: stretch; align-items: center; justify-content: space-between; display: none;">
         <ui:Label tabindex="-1" text="Options" parse-escape-sequences="true" display-tooltip-when-elided="true" style="font-size: 170%; width: auto; height: auto; -unity-text-align: middle-center; white-space: normal; -unity-text-outline-color: rgba(99, 135, 140, 0); color: rgb(99, 135, 140);" />
         <ui:ScrollView scroll-deceleration-rate="0,135" elasticity="0,1" style="font-size: 70px; width: auto; align-self: center; align-items: center; justify-content: space-between; -unity-text-align: upper-left; height: auto;">
             <ui:GroupBox style="flex-direction: row; align-self: stretch; align-items: auto; justify-content: space-around;">
                 <ui:GroupBox style="align-self: flex-start; align-items: stretch; flex-direction: column; justify-content: center; width: 60%; min-width: 60%; max-width: 60%;">
-                    <ui:MinMaxSlider picking-mode="Ignore" label="MinMaxSlider" min-value="10" max-value="12" low-limit="0" high-limit="100" name="MinMaxSlider" focusable="true" class="alaid" style="font-size: 70%; align-self: auto; width: auto; min-height: auto; min-width: 80%; align-items: stretch; justify-content: flex-start;" />
-                    <ui:Slider picking-mode="Ignore" label="Slider" value="42" high-value="100" name="Slider" focusable="true" class="alaid" style="width: auto; font-size: 70%; -unity-text-outline-color: rgba(255, 255, 255, 0); align-self: auto; align-items: stretch;" />
-                    <ui:DropdownField label="Dropdown" index="-1" choices="System.Collections.Generic.List`1[System.String]" name="Dropdown" focusable="true" class="alaid" style="width: auto; font-size: 70%; align-self: stretch; align-items: stretch; justify-content: flex-start; display: flex;" />
-                    <ui:Toggle label="Toggle" name="Toggle" value="false" focusable="true" class="alaid" style="height: auto; align-self: auto; align-items: stretch; font-size: 70.725%; margin-right: 60px; justify-content: space-around; visibility: visible; overflow: hidden; -unity-text-align: middle-center; -unity-font-style: normal; flex-direction: row; flex-wrap: nowrap; -unity-text-outline-color: rgba(255, 255, 255, 0);" />
+                    <ui:MinMaxSlider picking-mode="Ignore" label="MinMaxSlider" min-value="10" max-value="12" low-limit="0" high-limit="100" name="MinMaxSlider" focusable="true" class="style" style="font-size: 70%; align-self: auto; width: auto; min-height: auto; min-width: 80%; align-items: stretch; justify-content: flex-start;" />
+                    <ui:Slider picking-mode="Ignore" label="Slider" value="42" high-value="100" name="Slider" focusable="true" class="style" style="width: auto; font-size: 70%; -unity-text-outline-color: rgba(255, 255, 255, 0); align-self: auto; align-items: stretch;" />
+                    <ui:DropdownField label="Dropdown" index="-1" choices="System.Collections.Generic.List`1[System.String]" name="Dropdown" focusable="true" class="style" style="width: auto; font-size: 70%; align-self: stretch; align-items: stretch; justify-content: flex-start; display: flex;" />
+                    <ui:Toggle label="Toggle" name="Toggle" value="false" focusable="true" class="style" style="height: auto; align-self: auto; align-items: stretch; font-size: 70.725%; margin-right: 60px; justify-content: space-around; visibility: visible; overflow: hidden; -unity-text-align: middle-center; -unity-font-style: normal; flex-direction: row; flex-wrap: nowrap; -unity-text-outline-color: rgba(255, 255, 255, 0);" />
                 </ui:GroupBox>
                 <ui:GroupBox name="GroupBox" style="justify-content: center; flex-direction: column; width: 40%; max-width: 40%; min-width: 40%; -unity-text-align: upper-center;">
-                    <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Label1" style="color: rgb(255, 255, 255); font-size: 50%;" />
-                    <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Label2" style="color: rgb(255, 255, 255); font-size: 50%;" />
-                    <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Label3" style="color: rgb(255, 255, 255); font-size: 50%;" />
-                    <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Label4" enable-rich-text="true" style="font-size: 50%; -unity-text-outline-color: rgba(255, 255, 255, 0); color: rgb(255, 255, 255); width: auto; -unity-text-align: middle-center; align-items: auto; flex-direction: row; flex-shrink: initial; flex-grow: initial; max-width: none; max-height: none;" />
+                    <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Label1" class="style" style="color: rgb(255, 255, 255); font-size: 50%;" />
+                    <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Label2" class="style" style="color: rgb(255, 255, 255); font-size: 50%;" />
+                    <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Label3" class="style" style="color: rgb(255, 255, 255); font-size: 50%;" />
+                    <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Label4" enable-rich-text="true" class="style" style="font-size: 50%; -unity-text-outline-color: rgba(255, 255, 255, 0); color: rgb(255, 255, 255); width: auto; -unity-text-align: middle-center; align-items: auto; flex-direction: row; flex-shrink: initial; flex-grow: initial; max-width: none; max-height: none;" />
                 </ui:GroupBox>
             </ui:GroupBox>
-            <ui:RadioButtonGroup label="Radio Button Group" value="-1" choices="UnityEngine.UIElements.RadioButtonGroup+&lt;get_choices&gt;d__7" name="RadioButtonGroup" style="-unity-text-align: upper-left; align-self: center; color: rgb(255, 255, 255); font-size: 70%;" />
+            <ui:RadioButtonGroup label="Radio Button Group" value="-1" choices="UnityEngine.UIElements.RadioButtonGroup+&lt;get_choices&gt;d__7" name="RadioButtonGroup" class="style" style="-unity-text-align: upper-left; align-self: center; color: rgb(255, 255, 255); font-size: 70%;" />
         </ui:ScrollView>
-        <ui:Button text="Back" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Back" class="alaid unity-button jsp" style="height: 20%; transition-property: scale; transition-duration: 0.5s; transition-delay: 0.02s; transition-timing-function: linear; margin-top: 30px; width: 80%; font-size: 130%;" />
+        <ui:Button text="Back" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Back" class="unity-button style" style="height: 20%; transition-property: scale; transition-duration: 0.5s; transition-delay: 0.02s; transition-timing-function: linear; margin-top: 30px; width: 80%; font-size: 130%;" />
     </ui:VisualElement>
     <ui:VisualElement name="GameMenu" style="flex-grow: 1; display: none; -unity-text-align: upper-center;">
         <ui:GroupBox style="width: auto; height: 10%; flex-direction: row; align-self: stretch; justify-content: flex-start; align-items: flex-start; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-bottom: 0; padding-left: 0;">
             <ui:GroupBox style="width: 90%; align-items: flex-start; justify-content: space-around; align-self: stretch;" />
-            <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="Pause" style="font-size: 14%; background-image: url(&apos;project://database/Assets/568359.png?fileID=2800000&amp;guid=3d5eac78cb0723f44b07bba2ec328df6&amp;type=3#568359&apos;); width: auto; height: auto; -unity-background-scale-mode: scale-to-fit; -unity-slice-scale: 1px; align-self: stretch; align-items: auto; justify-content: space-around; flex-shrink: 1; flex-grow: 1;" />
+            <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="Pause" style="font-size: 14%; background-image: url(&apos;project://database/Assets/Art/Images/568359.png?fileID=2800000&amp;guid=3d5eac78cb0723f44b07bba2ec328df6&amp;type=3#568359&apos;); width: auto; height: auto; -unity-background-scale-mode: scale-to-fit; -unity-slice-scale: 1px; align-self: stretch; align-items: auto; justify-content: space-around; flex-shrink: 1; flex-grow: 1;" />
         </ui:GroupBox>
         <ui:GroupBox name="GroupBox" style="flex-direction: column; justify-content: space-between; align-self: center; height: 90%; align-items: stretch; width: 90%;">
             <ui:VisualElement name="ConversationContainer" class="dialogues" style="flex-grow: 1; flex-direction: column;" />
-            <ui:VisualElement name="ChoicesContainer" class="alaid" style="flex-grow: 1; -unity-text-outline-color: rgba(255, 255, 255, 0);" />
+            <ui:VisualElement name="ChoicesContainer" class="style" style="flex-grow: 1; -unity-text-outline-color: rgba(255, 255, 255, 0);" />
         </ui:GroupBox>
     </ui:VisualElement>
     <ui:VisualElement name="GamePausedMenu" style="flex-grow: 1; align-self: stretch; align-items: stretch; justify-content: center; display: none;">
-        <ui:Button text="Resume" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Resume" class="alaid" style="height: 20%;" />
-        <ui:Button text="Settings" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Settings" class="alaid" style="height: 20%;" />
-        <ui:Button text="Main Menu" parse-escape-sequences="true" display-tooltip-when-elided="true" name="MainMenuButton" class="alaid" style="height: 20%;" />
+        <ui:Button text="Resume" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Resume" class="style" style="height: 20%;" />
+        <ui:Button text="Settings" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Settings" class="style" style="height: 20%;" />
+        <ui:Button text="Main Menu" parse-escape-sequences="true" display-tooltip-when-elided="true" name="MainMenuButton" class="style" style="height: 20%;" />
     </ui:VisualElement>
 </ui:UXML>

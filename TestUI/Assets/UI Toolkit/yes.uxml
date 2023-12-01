@@ -1,5 +1,4 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
-    <Style src="project://database/Assets/alaid.uss?fileID=7433441132597879392&amp;guid=782fce0a6386fba4f818b148b8722e31&amp;type=3#alaid" />
     <ui:VisualElement name="MainMenu" style="flex-grow: 1; align-items: stretch; justify-content: center; flex-shrink: 1; display: none;">
         <ui:Button text="Play" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Play" class="alaid" style="height: 20%;" />
         <ui:Button text="Settings" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Options" class="alaid" style="height: 20%;" />
@@ -12,7 +11,7 @@
                 <ui:GroupBox style="align-self: flex-start; align-items: stretch; flex-direction: column; justify-content: center; width: 60%; min-width: 60%; max-width: 60%;">
                     <ui:MinMaxSlider picking-mode="Ignore" label="MinMaxSlider" min-value="10" max-value="12" low-limit="0" high-limit="100" name="MinMaxSlider" focusable="true" class="alaid" style="font-size: 70%; align-self: auto; width: auto; min-height: auto; min-width: 80%; align-items: stretch; justify-content: flex-start;" />
                     <ui:Slider picking-mode="Ignore" label="Slider" value="42" high-value="100" name="Slider" focusable="true" class="alaid" style="width: auto; font-size: 70%; -unity-text-outline-color: rgba(255, 255, 255, 0); align-self: auto; align-items: stretch;" />
-                    <ui:DropdownField label="Dropdown" index="-1" choices="System.Collections.Generic.List`1[System.String]" name="Dropdown" focusable="true" class="alaid" style="width: auto; font-size: 70%; align-self: stretch; align-items: stretch; justify-content: flex-start;" />
+                    <ui:DropdownField label="Dropdown" index="-1" choices="System.Collections.Generic.List`1[System.String]" name="Dropdown" focusable="true" class="alaid" style="width: auto; font-size: 70%; align-self: stretch; align-items: stretch; justify-content: flex-start; display: flex;" />
                     <ui:Toggle label="Toggle" name="Toggle" value="false" focusable="true" class="alaid" style="height: auto; align-self: auto; align-items: stretch; font-size: 70.725%; margin-right: 60px; justify-content: space-around; visibility: visible; overflow: hidden; -unity-text-align: middle-center; -unity-font-style: normal; flex-direction: row; flex-wrap: nowrap; -unity-text-outline-color: rgba(255, 255, 255, 0);" />
                 </ui:GroupBox>
                 <ui:GroupBox name="GroupBox" style="justify-content: center; flex-direction: column; width: 40%; max-width: 40%; min-width: 40%; -unity-text-align: upper-center;">
@@ -24,7 +23,7 @@
             </ui:GroupBox>
             <ui:RadioButtonGroup label="Radio Button Group" value="-1" choices="UnityEngine.UIElements.RadioButtonGroup+&lt;get_choices&gt;d__7" name="RadioButtonGroup" style="-unity-text-align: upper-left; align-self: center; color: rgb(255, 255, 255); font-size: 70%;" />
         </ui:ScrollView>
-        <ui:Button text="Back" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Back" class="alaid" style="height: 20%; transition-property: scale; transition-duration: 0.5s; transition-delay: 0.02s; transition-timing-function: linear; margin-top: 30px; width: 80%; font-size: 130%;" />
+        <ui:Button text="Back" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Back" class="alaid unity-button jsp" style="height: 20%; transition-property: scale; transition-duration: 0.5s; transition-delay: 0.02s; transition-timing-function: linear; margin-top: 30px; width: 80%; font-size: 130%;" />
     </ui:VisualElement>
     <ui:VisualElement name="GameMenu" style="flex-grow: 1; display: none; -unity-text-align: upper-center;">
         <ui:GroupBox style="width: auto; height: 10%; flex-direction: row; align-self: stretch; justify-content: flex-start; align-items: flex-start; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-bottom: 0; padding-left: 0;">

@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -16,6 +17,8 @@ public class ConversationManager : MonoBehaviour
 
     public int currentIndex = 0;
     private string currentLanguage = "French"; // Default language
+    
+    private DropdownField _DropdownField;
     
     public static ConversationManager Instance { get; private set; }
     
@@ -56,6 +59,9 @@ public class ConversationManager : MonoBehaviour
     {
         conversationContainer = _uiDocument.rootVisualElement.Q<VisualElement>("ConversationContainer");
         choicesContainer = _uiDocument.rootVisualElement.Q<VisualElement>("ChoicesContainer");
+        _DropdownField = _uiDocument.rootVisualElement.Q<DropdownField>("Dropdown");
+        _DropdownField.choices = new List<string>(new[] {"English", "French", "Japanese"});
+        _DropdownField.RegisterValueChangedCallback(evt => ChangeLanguage(evt.newValue));
 
         conversation = LoadConversation(_jsonFile);
         DisplayCurrentItem();

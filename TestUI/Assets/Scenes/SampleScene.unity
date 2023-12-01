@@ -441,6 +441,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _uiDocument: {fileID: 606325635}
+  _themeStyleSheet1: {fileID: -4733365628477956816, guid: fe6146cba304c6349b47c1a2309375a8,
+    type: 3}
+  _themeStyleSheet2: {fileID: -4733365628477956816, guid: c7a042d3cac10504088419364d3ebd5c,
+    type: 3}
   _isInGame: 0
 --- !u!1 &832575517
 GameObject:

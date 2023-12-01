@@ -305,6 +305,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _uiDocument: {fileID: 1205340286}
+  _themeStyleSheet1: {fileID: -4733365628477956816, guid: fe6146cba304c6349b47c1a2309375a8,
+    type: 3}
+  _themeStyleSheet2: {fileID: -4733365628477956816, guid: c7a042d3cac10504088419364d3ebd5c,
+    type: 3}
   _isInGame: 1
 --- !u!114 &1205340290
 MonoBehaviour:
@@ -320,6 +324,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _uiDocument: {fileID: 1205340286}
   _jsonFile: {fileID: 4900000, guid: df1f4496ce0b449ea1c7fc6c7e2f03c0, type: 3}
+  currentIndex: 0
   conversation: []
 --- !u!1 &1473325467
 GameObject:

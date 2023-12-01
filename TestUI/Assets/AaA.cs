@@ -6,6 +6,9 @@ using UnityEngine.UIElements;
 public class AaA : MonoBehaviour
 {
     [SerializeField] private UIDocument _uiDocument;
+
+    [SerializeField] private ThemeStyleSheet _themeStyleSheet1;
+    [SerializeField] private ThemeStyleSheet _themeStyleSheet2;
     
     // rootVisualElement is the main container for each VisualElement in a hierarchy
     private VisualElement _root;
@@ -48,6 +51,10 @@ public class AaA : MonoBehaviour
     
     public void Awake()
     {
+        if (_uiDocument.panelSettings.themeStyleSheet == null)
+        {
+            _uiDocument.panelSettings.themeStyleSheet = _themeStyleSheet1;
+        }
         _root = _uiDocument.rootVisualElement;
         
         _Play = _root.Q<Button>("Play");
@@ -84,7 +91,9 @@ public class AaA : MonoBehaviour
         _Slider.RegisterValueChangedCallback(evt => _Labels[1].text = $"Slider: {evt.newValue}");
         
         _DropdownField.RegisterValueChangedCallback(evt => _Labels[2].text = $"Dropdown: {evt.newValue}");
-        _Toggle.RegisterValueChangedCallback(evt => _Labels[3].text = $"Toggle: {evt.newValue}");
+        // _Toggle.RegisterValueChangedCallback(evt => _uiDocument.panelSettings.themeStyleSheet = evt.newValue ? _themeStyleSheet1 : _themeStyleSheet2);
+        // _Toggle.RegisterValueChangedCallback(evt => _Labels[3].text = $"Toggle: {evt.newValue}");
+        _Toggle.RegisterValueChangedCallback(evt => { _Labels[3].text = $"Toggle: {evt.newValue}"; ChangeThemeStyleSheet(evt.newValue); });
         
         _Back.clicked += Back;
         
@@ -147,7 +156,12 @@ public class AaA : MonoBehaviour
             _GamePausedMenu.style.display = DisplayStyle.None;
         }
     }
-    
+
+    private void ChangeThemeStyleSheet(bool evtNewValue)
+    {
+        _uiDocument.panelSettings.themeStyleSheet = evtNewValue ? _themeStyleSheet2 : _themeStyleSheet1;
+    }
+
     private void Resume()
     {
         _GamePausedMenu.style.display = DisplayStyle.None;

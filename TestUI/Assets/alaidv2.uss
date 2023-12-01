@@ -1,27 +1,27 @@
 .alaid {
     font-size: 300%;
-    color: rgb(255, 0, 0);
+    color: rgb(0, 60, 255);
     -unity-font-style: bold;
 }
 
 .alaid:active:focus {
-    color: rgb(178, 0, 152);
+    color: rgb(116, 255, 0);
     -unity-font-style: bold;
 }
 
 .alaid:hover {
     font-size: 300%;
-    color: rgb(0, 7, 255);
+    color: rgb(8, 255, 0);
     -unity-font-style: bold;
 }
 
 .alaid:active:checked:focus {
-    color: rgb(0, 255, 108);
+    color: rgb(54, 255, 0);
     -unity-font-style: bold;
 }
 
 .alaid:focus {
-    color: rgb(255, 206, 0);
+    color: rgb(0, 72, 255);
     -unity-font-style: bold;
 }
 
@@ -44,7 +44,7 @@
     transition-duration: 0.2s;
     transition-timing-function: ease-in-out;
     transition-delay: 0.0s;
-    
+
     border-radius: 150px;
     border-width: 0px;
     border-style: solid;

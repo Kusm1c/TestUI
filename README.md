@@ -12,3 +12,5 @@ It is used to manage the conversation. It is a singleton. It is used to store th
 
 ### UIManager
 It is used to manage the UI. It is a singleton. It's used to setup the UI and to update the UI.
+
+.

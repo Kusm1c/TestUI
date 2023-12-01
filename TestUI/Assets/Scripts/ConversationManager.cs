@@ -99,7 +99,7 @@ public class ConversationManager : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            ChangeLanguage("English");
+            _DropdownField.value = "English";
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {

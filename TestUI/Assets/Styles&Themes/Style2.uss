@@ -1,26 +1,26 @@
-.alaid {
+.style {
     font-size: 300%;
     color: rgb(0, 60, 255);
     -unity-font-style: bold;
 }
 
-.alaid:active:focus {
+.style:active:focus {
     color: rgb(116, 255, 0);
     -unity-font-style: bold;
 }
 
-.alaid:hover {
+.style:hover {
     font-size: 300%;
     color: rgb(8, 255, 0);
     -unity-font-style: bold;
 }
 
-.alaid:active:checked:focus {
+.style:active:checked:focus {
     color: rgb(54, 255, 0);
     -unity-font-style: bold;
 }
 
-.alaid:focus {
+.style:focus {
     color: rgb(0, 72, 255);
     -unity-font-style: bold;
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class AaA : MonoBehaviour
+public class UIManager : MonoBehaviour
 {
     [SerializeField] private UIDocument _uiDocument;
 
